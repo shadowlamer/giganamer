@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор имен переменных</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2 class="mb-3">Генератор имен переменных</h2>
+    <form action="/" method="post" class="row form-inline" id="myform">
+        <div class="form-group w-50 mb-2">
+            <label for="description" class="sr-only">Описание</label>
+            <input type="text" class="form-control w-100" id="description" placeholder="Введите описание переменной">
+        </div>
+        <div class="form-group mb-2 mx-sm-3">
+            <label for="template" class="sr-only">Шаблон</label>
+            <select class="form-control" id="template">
+                <option value="camelCase">camelCase</option>
+                <option value="PascalCase">PascalCase</option>
+                <option value="snake_case">snake_case</option>
+                <option value="MACRO_CASE">MACRO_CASE</option>
+                <option value="kebab-case">kebab-case</option>
+                <!-- Добавьте другие шаблоны, если необходимо -->
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2 fixed-width-button">Сгенерировать</button>
+    </form>
+    <div class="row mt-2">
+        <div class="col-2">
+            <button type="submit" class="btn btn-primary mb-2 fixed-width-button" id="copy-button">Скопировать</button>
+        </div>
+        <div class="col-2 mt-2">Имя переменной:</div>
+        <div class="col-8 mt-2" id="response-box"></div>
+    </div>
+</body>
+</html>
